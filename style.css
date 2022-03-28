@@ -1,0 +1,164 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#clicker{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#clickerimage{
+    position: absolute;
+    top: 30%;
+    width: 500px;
+}
+
+#shopframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 600px;
+    background-color: bisque;
+    position: absolute;
+    top: 20%;
+    border-radius: 10px;
+    border: 7px solid rgb(255, 206, 146);
+    visibility: hidden;
+}
+
+
+#score-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    background-color: bisque;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 4px solid rgb(255, 206, 146);
+    font-size: xx-large;
+}
+
+#shopbutton{
+    position: absolute;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: bisque;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 4px solid rgb(255, 206, 146);
+    bottom: 30px;
+    cursor: pointer;
+}
+
+#shoptitle{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    font-size: x-large;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    color: bisque;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 192, 115);
+}
+
+#grid-layout{
+     
+    position: absolute;
+    background-color: rgb(255, 206, 146);
+    width: 95%;
+    height: 70%;
+    display: grid;
+    bottom: 10%;
+    grid-template-columns: auto auto auto;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 60px;
+    overflow-y:auto
+}
+
+.buy-img{
+    width: 80px;
+    height: 80px;
+}
+
+.item{
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+#context-menu{
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    transform: scale(0);
+    transform-origin: top left;
+    border: 1px solid bisque;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    padding: 4px;
+    border-radius: 8px;
+    border: 4px solid rgb(255, 206, 146);
+    transition: transform 200ms ease-in-out;
+
+}
+#context-menu.active{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+#context-menu .context-item{
+    font-size: 15px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+#context-menu .context-item:hover{
+    background: rgb(255, 206, 146);
+    
+}
+#context-menu .context-item i{
+    display: inline-block;
+    margin-right: 5px;
+}
+
